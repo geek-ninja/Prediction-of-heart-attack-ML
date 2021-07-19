@@ -56,8 +56,8 @@ classifier.fit(x_train,y_train)
 print('accuracy is ', classifier.score(x_test,y_test)*100,'%')
 
 #saving the model
-filename = 'model_ml.sav'
+filename = 'ml_model.sav'
 joblib.dump(classifier,filename)
 ```
+<p>joblib module of python is used to create an instance of the model so that we can use it in django as a .sav file</p>
 
-  
