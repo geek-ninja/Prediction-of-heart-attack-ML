@@ -14,6 +14,10 @@ python manage.py startapp heartattackML
 <h3>How to run the django server</h3>
 python manage.py runserver
 
+<h2>Machine Learning Model</h2>
+<p>The model used here is Logistic Regression with an accuracy of 88 %</p>
+<p>The dataset taken from the link below</p>
+https://www.kaggle.com/rashikrahmanpritom/heart-attack-analysis-prediction-dataset
 
 
 
