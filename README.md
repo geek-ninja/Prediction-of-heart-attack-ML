@@ -113,4 +113,18 @@ def res_view(request):
     res = result[i]
     return render(request,"ml/output.html",{'pred': res,'i':i})
 ```
-<h3>res_view() function gets the input from the website(user) and predict the output and pass the result as a context variable </h3>
+<h3>res_view() function in views.py gets the input from the website(user) and predict the output and pass the result as a context variable </h3>
+
+<p>django (urls.py)</p>
+
+```python
+from django.contrib import admin
+from django.urls import path
+from heartattackML.views import input_view,res_view
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('input/',input_view,name = 'input'),
+    path('output/',res_view,name = 'output')
+]
+```
+<p>These paths in urls.py will connect different pages of your website</p>
