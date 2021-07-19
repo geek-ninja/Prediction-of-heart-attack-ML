@@ -167,4 +167,4 @@ TEMPLATES = [
 MEDIA_ROOT = os.path.join(BASE_DIR,'model')
 MEDIA_URL = '/model/'
 ```
-<p>Add these additional segments in settings.py of django will link your static folders and model model folder where you kept all your css & html files , sav files , csv files etc. It make your template folder global </p> 
+<h3>Add these additional segments in settings.py of django will helps to link your static folders and model folder where you kept all your css & html files , sav files , csv files etc. It make your template folder global </h3> 
