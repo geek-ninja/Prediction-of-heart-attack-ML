@@ -53,7 +53,7 @@ from sklearn.linear_model import LogisticRegression
 classifier = LogisticRegression()
 classifier.fit(x_train,y_train)
 
-print('accuracy is ', classifier.score(x_test,y_test)*100,'%')
+print('accuracy is ', classifier.score(x_test,y_test)*100,'%') #Accuracy is   0.881578947368421
 
 #saving the model
 filename = 'ml_model.sav'
@@ -168,3 +168,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'model')
 MEDIA_URL = '/model/'
 ```
 <h3>Add these additional segments in settings.py of django will helps to link your static folders and model folder where you kept all your css & html files , sav files , csv files etc. It make your template folder global </h3> 
+
+<h3>Screen shots of the website input page and output page</h3>
+<p>input.html</p>
+
+![](1.png)
