@@ -128,3 +128,43 @@ urlpatterns = [
 ]
 ```
 <p>These paths in urls.py will connect different pages of your website</p>
+
+<p>django (settings.py)</p>
+
+```python
+import os
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'heartattackML',
+]
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR,"templates")],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'model')
+MEDIA_URL = '/model/'
+```
+<p>Add these additional segments in settings.py of django will link your static folders and model model folder where you kept all your css & html files , sav files , csv files etc. It make your template folder global </p> 
