@@ -113,3 +113,4 @@ def res_view(request):
     res = result[i]
     return render(request,"ml/output.html",{'pred': res,'i':i})
 ```
+<h3>res_view() function gets the input from the website(user) and predict the output and pass the result as a context variable </h3>
