@@ -34,29 +34,30 @@ from sklearn import preprocessing
 from sklearn.compose import ColumnTransformer
 import joblib
 
-dataset = pd.read_csv('glass.csv')
 
-x = dataset.iloc[:,:-1]
-y = dataset.iloc[:,9]
+
+dataset = pd.read_csv('/kaggle/input/heart-attack-analysis-prediction-dataset/heart.csv')
+
+x = dataset.iloc[:,:-1].values
+y = dataset.iloc[:,-1].values
 
 from sklearn.model_selection import train_test_split
-x_train,x_test,y_train,y_test = train_test_split(x,y,test_size = 0.20,random_state = 42)
+x_train,x_test,y_train,y_test = train_test_split(x,y,test_size = 0.25,random_state = 102)
 
 from sklearn.preprocessing import StandardScaler
 sc_x = StandardScaler()
 x_train = sc_x.fit_transform(x_train)
 x_test = sc_x.transform(x_test)
 
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+classifier = LogisticRegression()
+classifier.fit(x_train,y_train)
 
-clss = RandomForestClassifier(criterion='entropy',n_estimators=300,random_state=42)
-clss.fit(x_train,y_train)
-
-print('accuracy is ', clss.score(x_test,y_test)*100,'%')
+print('accuracy is ', classifier.score(x_test,y_test)*100,'%')
 
 #saving the model
-filename = 'finalized_model.sav'
-joblib.dump(clss,filename)
+filename = 'model_ml.sav'
+joblib.dump(classifier,filename)
 ```
 
   
