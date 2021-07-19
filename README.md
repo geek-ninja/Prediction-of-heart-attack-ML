@@ -23,7 +23,7 @@ https://www.kaggle.com/rashikrahmanpritom/heart-attack-analysis-prediction-datas
 
 <h2>Machine Learning model used</h2>
 <p>Logistic Regression (model.py)</p>
-<iframe src="https://www.kaggle.com/embed/geekninja/heart-attack-classificaion?cellId=2&cellIds=2&kernelSessionId=67487677" height="300" style="margin: 0 auto; width: 100%; max-width: 950px;" frameborder="0" scrolling="auto" title="heart-attack-classificaion"></iframe>
+
 ```python
 import numpy as np
 import pandas as pd
