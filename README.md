@@ -288,3 +288,5 @@ MEDIA_URL = '/model/'
 </body>
 </html>
 ```
+
+<h3>*** Your Contributions to this repo is always welcome ..Thank you *** </h3>
