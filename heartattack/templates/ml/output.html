@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML_Result</title>
+    <link rel="stylesheet" href="{% static 'CSS/output.css' %}">
+</head>
+<body>
+    <div class="res_body">
+        {% if i == 1 %}
+        <img src="http://turkishlaborlaw.com/wp-content/uploads/2016/12/heart_attack_art.png">
+        <p>ML Result :  {{pred}}</p>
+        {% else %}
+        <img src="https://previews.123rf.com/images/kahovsky/kahovsky1908/kahovsky190800201/129198072-cute-funny-smiling-doctor-cardiologist-and-healthy-happy-heart-healthcare-medical-help-vector-flat-c.jpg">
+        <p>ML_Result :  {{pred}}</p>
+        {% endif %}
+    </div>
+<button><a href="{% url 'input' %}">Go Back</a></button>
+</body>
+</html>

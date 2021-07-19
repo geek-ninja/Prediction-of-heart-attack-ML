@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heartAttack-ML</title>
+</head>
+<body>
+    <h1>Enter the data.</h1>
+    <form action="{% url 'output' %}">{% csrf_token %}
+        Age : <input type="number" required name="age"><br><br>
+        <label for="sex">Sex:</label>
+        <select name="sex">
+            <option value="1">male</option>
+            <option value="0">female</option>
+        </select>
+        <br>
+        <br>
+        {% comment %} Exange : <input type="number" required name="exange" min = '0' max = '1'><br><br> {% endcomment %}
+        Cp : <input type="number" required name="cp" step="any"  min = '0' max = '3'><br><br>
+        Trtbps : <input type="number" required name="trtbps" step="any" ><br><br>
+        Chol : <input type="number" required name="chol" step="any" ><br><br>
+        Fbs : <input type="number" required name="fbs" step="any"  min = '0' max = '1'><br><br>
+        Restecg : <input type="number" required name="restecg"  step="any" min = '0' max = '2'><br><br>
+        Thalachh : <input type="number" required name="thalachh" step="any" ><br><br>
+        Exng : <input type="number" required name="exng" step="any"  min = '0' max = '1'><br><br>
+        Oldpeak : <input type="number" required name="oldpeak" step="any" ><br><br>
+        Slp : <input type="number" required name="slp" step="any" min = '0' max = '2'><br><br>
+        Caa : <input type="number" required name="caa" step="any" min = '0' max = '4'><br><br>
+        Thall : <input type="number" required name="thall" step="any" min = '0' max = '3'><br><br>
+
+        <input type="submit" name="" value="submit">
+    </form>
+    
+</body>
+</html>

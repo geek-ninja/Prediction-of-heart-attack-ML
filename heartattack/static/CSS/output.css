@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,700&display=swap');
+*{
+    margin: 0;
+    font-family: 'Cabin', sans-serif;
+    font-size: 30px;
+}
+.res_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+.res_body > img{
+    max-height: 500px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+button{
+    bottom: 0;
+    position: absolute;
+    margin: 30px;
+}
