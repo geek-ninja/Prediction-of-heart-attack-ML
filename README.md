@@ -1,3 +1,8 @@
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
+
 # Prediction-of-heart-attack-ML
 <h2>Prediction Website made using Django and machine learning</h2><br>
 <p>hope you have installed django or else you can follow the command</p><br>
