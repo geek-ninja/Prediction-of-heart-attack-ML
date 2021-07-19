@@ -174,6 +174,9 @@ MEDIA_URL = '/model/'
 
 ![](1.png)
 
+
+<p>input.html code</p>
+    
 ```html
 {% load static %}
 <!DOCTYPE html>
