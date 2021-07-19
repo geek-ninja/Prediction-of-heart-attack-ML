@@ -173,3 +173,77 @@ MEDIA_URL = '/model/'
 <p>input.html</p>
 
 ![](1.png)
+
+```html
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heartAttack-ML</title>
+    <link rel="stylesheet" href="{% static 'CSS/input.css' %}">
+</head>
+<body>
+    <div class="body_head">
+        <h1>Prediction of heart attack</h1>
+        <img src="https://freepngimg.com/download/health/22905-6-health-file.png">
+    </div>
+    <div class="body">
+        <div class="body_left">
+            <h1>Enter the data.</h1>
+            <form action="{% url 'output' %}">{% csrf_token %}
+                Age : <input type="number" required name="age"><br><br>
+                <label for="sex">Sex:</label>
+                <select name="sex">
+                    <option value="1">male</option>
+                    <option value="0">female</option>
+                </select>
+                <br>
+                <br>
+                Cp : <input type="number" required name="cp" step="any"  min = '0' max = '3'><br><br>
+                Trtbps : <input type="number" required name="trtbps" step="any" ><br><br>
+                Chol : <input type="number" required name="chol" step="any" ><br><br>
+                Fbs : <input type="number" required name="fbs" step="any"  min = '0' max = '1'><br><br>
+                Restecg : <input type="number" required name="restecg"  step="any" min = '0' max = '2'><br><br>
+                Thalachh : <input type="number" required name="thalachh" step="any" ><br><br>
+                Exng : <input type="number" required name="exng" step="any"  min = '0' max = '1'><br><br>
+                Oldpeak : <input type="number" required name="oldpeak" step="any" ><br><br>
+                Slp : <input type="number" required name="slp" step="any" min = '0' max = '2'><br><br>
+                Caa : <input type="number" required name="caa" step="any" min = '0' max = '4'><br><br>
+                Thall : <input type="number" required name="thall" step="any" min = '0' max = '3'><br><br>
+        
+                <input type="submit" name="" value="submit">
+            </form>
+        </div>
+        <div class="body_right">
+            <div class="body_right_info">
+                <h1>Info</h1>
+                <p>Age : Age of the patient</p>
+                <p>Sex : Sex of the patient</p>
+                <p>exang: exercise induced angina (1 = yes; 0 = no)</p>
+                <p>ca: number of major vessels (0-3)</p>
+                <p>cp : Chest Pain type chest pain type</p>
+                <ul>
+                    <li>Value 1: typical angina</li>
+                    <li>Value 2: atypical angina</li>
+                    <li>Value 3: non-anginal pain</li>
+                    <li>Value 4: asymptomatic</li>
+                </ul>
+                <p>trtbps : resting blood pressure (in mm Hg)</p>
+                <p>chol : cholestoral in mg/dl fetched via BMI sensor</p>
+                <p>fbs : (fasting blood sugar > 120 mg/dl) (1 = true; 0 = false)</p>
+                <p>est_ecg : resting electrocardiographic results</p>
+                <ul>
+                    <li>Value 0: normal</li>
+                    <li>Value 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)</li>
+                    <li>Value 2: showing probable or definite left ventricular hypertrophy by Estes' criteria</li>
+                </ul>
+                <p>thalach : maximum heart rate achieved</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+```
